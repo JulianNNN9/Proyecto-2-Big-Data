@@ -40,7 +40,6 @@ def clean_text(text):
 # Aplicar limpieza a todas las reseñas
 amazon_reviews['Processed_Text'] = amazon_reviews['Text'].apply(clean_text)
 
-# 3. EJERCICIO 1: WORD CLOUD -----------------------------------------------
 # Generar nube de palabras con texto preprocesado
 all_text = ' '.join(amazon_reviews['Processed_Text'])
 wordcloud = WordCloud(width=800, height=400, background_color='white').generate(all_text)
@@ -50,7 +49,6 @@ plt.axis('off')
 plt.title('Word Cloud de Reseñas Preprocesadas')
 plt.show()
 
-# 4. EJERCICIO 3: PALABRAS DE ALTA/BAJA FRECUENCIA -------------------------
 # Tokenizar todo el texto preprocesado
 all_tokens = [word for review in amazon_reviews['Processed_Text'] for word in review.split()]
 

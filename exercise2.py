@@ -50,7 +50,7 @@ print("Original:\n", sample_review)
 print("\nLimpia:\n", cleaned_review)
 
 # 5. Identificación de caracteres "seguros" vs. "problemáticos"
-safe_to_remove = {'!', '?', ',', '.', ';', ':', '"', "'", '(', ')', '[', ']'}  # Símbolos de puntuación
+safe_to_remove = {',', '.','"', "'",'[', ']'}  # Símbolos de puntuación
 potentially_important = {'@', '#', '$', '%', '&', '*', '+', '-', '/', '=', '<', '>', '~'}  # Emoticones, abreviaciones
 
 print("\nCaracteres seguros para eliminar:\n", safe_to_remove)
